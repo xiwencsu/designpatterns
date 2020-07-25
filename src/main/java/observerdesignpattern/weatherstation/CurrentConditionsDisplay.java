@@ -9,14 +9,14 @@ package observerdesignpattern.weatherstation;
 public class CurrentConditionsDisplay implements Observer,DisplayElement {
     private float temperature;
     private float humidity;
-    private WeatherData weatherData;
+    private Subject weatherData;
 
     public CurrentConditionsDisplay(){
 
     }
     public CurrentConditionsDisplay(WeatherData weatherData) {
         this.weatherData = weatherData;
-        //weatherData.registerObserver(this);
+        weatherData.registerObserver(this);
     }
 
     @Override

@@ -11,6 +11,15 @@ import java.util.ArrayList;
 
 
 public class WeatherData implements Subject{
+    @Override
+    public String toString() {
+        return "WeatherData{" +
+                "observers=" + observers +
+                ", temperature=" + temperature +
+                ", humidity=" + humidity +
+                ", pressure=" + pressure +
+                '}';
+    }
 
     private ArrayList<Observer> observers;
     private float temperature;
@@ -18,6 +27,7 @@ public class WeatherData implements Subject{
     private float pressure;
 
     public WeatherData() {
+        observers=new ArrayList<>();
     }
 
     @Override

@@ -18,7 +18,6 @@ public class Main {
         concreteSubject.notifyObserver(new Message(111,"wenxi"));*/
         WeatherData weatherData=new WeatherData();
         CurrentConditionsDisplay currentConditionsDisplay=new CurrentConditionsDisplay(weatherData);
-        weatherData.registerObserver(currentConditionsDisplay);
         weatherData.setMeasurements(88,89,78);
     }
 }
